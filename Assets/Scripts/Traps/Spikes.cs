@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class Spikes : Interactable
 {
-    //TODO 
-    // HP Script 
     [SerializeField]
-    private int Damage = 100;
+    bool isActiveOnStart = true;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private int damage = 100;
+
+    private void Awake()
     {
+        UI_Canvas = GameObject.Find("UI_Canvas");
+        inventory = UI_Canvas.GetComponent<ResourceInventory>();
+        this.enabled = isActiveOnStart;
     }
 
+    public void ActiveToggle()
+    {
+        isActiveOnStart = !isActiveOnStart;
+
+    }
     protected override void Interact(Collider other)
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        inventory.RemoveResource("HP", damage);
     }
 }

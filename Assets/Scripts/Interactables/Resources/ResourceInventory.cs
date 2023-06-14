@@ -35,6 +35,12 @@ public class ResourceInventory : MonoBehaviour
         {
             m_Oxygen += amount;
         }
+        
+        if (m_Fuel == 100.0f)
+        {
+            ToggleObstaclesByTag();
+        }
+
     }
 
     public void RemoveResource(string resource, float amount)
@@ -83,5 +89,21 @@ public class ResourceInventory : MonoBehaviour
     void Update()
     {
         UpdateUI();
+    }
+
+    private void ToggleObstaclesByTag()
+    {
+        foreach (GameObject obstacle in GameObject.FindGameObjectsWithTag("Obstacle"))
+        {
+            if (obstacle.GetComponent<ObstacleWall>() != null)
+            {
+                obstacle.GetComponent<ObstacleWall>().ActiveToggle();
+            }
+
+            if (obstacle.GetComponent<Spikes>() != null)
+            {
+                obstacle.GetComponent<Spikes>().ActiveToggle();
+            }
+        }
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    protected GameObject UI_Canvas; 
+    protected ResourceInventory inventory;
+
     [SerializeField]
     Color gizmoColor;
 
