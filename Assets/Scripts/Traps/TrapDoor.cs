@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class TrapDoor : MonoBehaviour
+public class TrapDoor : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private int cameraFaktor = 10;
+    Camera playerCamera;
+
+    private void Awake()
     {
-        
+        playerCamera = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Interact(Collider other)
     {
-        
+        other.GetComponent<NavMeshAgent>().enabled = false;
+        other.transform.position = Vector3.up * 10;
+        playerCamera.transform.position += Vector3.up * cameraFaktor;
+        other.GetComponent<NavMeshAgent>().enabled = true;
+
     }
 }
