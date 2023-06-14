@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TrapDoor : Interactable
+public class LadderUp : Interactable
 {
     [SerializeField]
     private int cameraFaktor = 10;
