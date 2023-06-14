@@ -16,12 +16,16 @@ public class Spikes : Interactable
         UI_Canvas = GameObject.Find("UI_Canvas");
         inventory = UI_Canvas.GetComponent<ResourceInventory>();
         this.enabled = isActiveOnStart;
+
+        GetComponent<SphereCollider>().enabled = isActiveOnStart;
+        GetComponent<MeshRenderer>().enabled = isActiveOnStart;
     }
 
     public void ActiveToggle()
     {
-        isActiveOnStart = !isActiveOnStart;
-
+        GetComponent<SphereCollider>().enabled = !GetComponent<SphereCollider>().enabled;
+        GetComponent<MeshRenderer>().enabled = !GetComponent<MeshRenderer>().enabled;
+        Debug.Log("Spike Active!");
     }
     protected override void Interact(Collider other)
     {

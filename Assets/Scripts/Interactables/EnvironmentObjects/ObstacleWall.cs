@@ -21,7 +21,7 @@ public class ObstacleWall : MonoBehaviour
         GetComponent<BoxCollider>().enabled = !GetComponent<BoxCollider>().enabled;
         GetComponent<NavMeshObstacle>().enabled = !GetComponent<NavMeshObstacle>().enabled;
         GetComponent<MeshRenderer>().enabled = !GetComponent<MeshRenderer>().enabled;
-        Debug.Log("Active!");
+        Debug.Log("Wall Active!");
 
     }
 }

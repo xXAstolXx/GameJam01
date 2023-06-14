@@ -102,6 +102,7 @@ public class ResourceInventory : MonoBehaviour
 
             if (obstacle.GetComponent<Spikes>() != null)
             {
+                Debug.Log("KEkse");
                 obstacle.GetComponent<Spikes>().ActiveToggle();
             }
         }
