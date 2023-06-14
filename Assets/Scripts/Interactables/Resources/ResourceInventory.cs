@@ -25,6 +25,8 @@ public class ResourceInventory : MonoBehaviour
         deathText = GameObject.Find("DeathText");
         deathText.SetActive(false);
 
+        AddResource("HP", 1.0f);
+        AddResource("Fuel", 0);
         
     }
 

@@ -16,6 +16,6 @@ public class OxygenInteractable : Interactable
     protected override void Interact(Collider other)
     {
         inventory.AddResource("Oxygen", OxygenAmount);
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

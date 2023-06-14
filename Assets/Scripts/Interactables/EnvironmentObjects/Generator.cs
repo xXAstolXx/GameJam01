@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Generator : Interactable
 {
-    //[SerializeField]
-    //private float requiredAmount = 1.0f;
 
     [SerializeField]
     private float checkAmount = 1.0f;

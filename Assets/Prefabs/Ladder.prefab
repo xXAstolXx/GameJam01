@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.943
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000023841858
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,9 +52,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4874126678125670354, guid: f1f8ef6dd4f4f9d4b8659510e2050c8c, type: 3}
+    - target: {fileID: -5754084199372789682, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5495902117074765545, guid: f1f8ef6dd4f4f9d4b8659510e2050c8c, type: 3}
     - target: {fileID: 919132149155446097, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
       propertyPath: m_Name
-      value: TrapDoor Variant
+      value: Ladder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67,7 +79,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8574783318436640711}
   m_SourcePrefab: {fileID: 100100000, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
---- !u!1 &8808713417953200790 stripped
+--- !u!1 &3969119193815007093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7031a78aa4ef3e04ba1af8153a54a05f, type: 3}
   m_PrefabInstance: {fileID: 4311155617332593188}
@@ -78,14 +90,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8808713417953200790}
+  m_GameObject: {fileID: 3969119193815007093}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c759071d68d6ba41bab2a8fc40b2ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoColor: {r: 0, g: 0, b: 0, a: 0}
-  debugInteractRadius: 0.96
+  debugInteractRadius: 1.46
   UpDownFactor: 15
   isLadderDown: 0
 --- !u!135 &8574783318436640711
@@ -94,7 +106,7 @@ SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8808713417953200790}
+  m_GameObject: {fileID: 3969119193815007093}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -107,5 +119,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.96
+  m_Radius: 1.46
   m_Center: {x: 0, y: 0, z: -0.027000207}
