@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Spikes : Interactable
 {
+    //TODO 
+    // HP Script 
     [SerializeField]
     private int Damage = 100;
 
@@ -15,6 +17,10 @@ public class Spikes : Interactable
 
     protected override void Interact(Collider other)
     {
-        Debug.Log("1");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
