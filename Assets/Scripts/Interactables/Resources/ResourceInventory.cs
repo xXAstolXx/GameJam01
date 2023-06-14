@@ -40,7 +40,7 @@ public class ResourceInventory : MonoBehaviour
         }
         if (resource == "Oxygen")
         {
-            m_Oxygen += amount;
+            gameObject.GetComponentInChildren<TimeLimit>().IncreaseValue(amount);
         }
         
         if (m_Fuel == 100.0f)

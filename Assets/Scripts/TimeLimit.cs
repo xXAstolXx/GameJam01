@@ -30,4 +30,9 @@ public class TimeLimit : MonoBehaviour
             inventory.RemoveResource("HP", 100);
         }
     }
+
+    public void IncreaseValue(float amount)
+    {
+        sliderValue.normalizedValue += amount;
+    }
 }
