@@ -14,11 +14,18 @@ public class ResourceInventory : MonoBehaviour
     private GameObject amountFuelUI;
     private GameObject amountOxygenUI;
 
+    private GameObject deathText;
+
     private void Awake()
     {
         amountHPUI = GameObject.Find("HPAmount");
         amountFuelUI = GameObject.Find("FuelAmount");
         amountOxygenUI = GameObject.Find("OxyAmount");
+
+        deathText = GameObject.Find("DeathText");
+        deathText.SetActive(false);
+
+        
     }
 
     public void AddResource(string resource, float amount)
@@ -48,6 +55,11 @@ public class ResourceInventory : MonoBehaviour
         if (resource == "HP")
         {
             m_HP -= amount;
+            if(m_HP <= 0)
+            {
+             IsDeath();
+
+            }
         }
         if (resource == "Fuel")
         {
@@ -102,8 +114,17 @@ public class ResourceInventory : MonoBehaviour
 
             if (obstacle.GetComponent<Spikes>() != null)
             {
+                Debug.Log("KEkse");
                 obstacle.GetComponent<Spikes>().ActiveToggle();
             }
         }
     }
+
+    private void IsDeath()
+    {
+        
+       deathText.SetActive(true);
+        
+    }
+
 }
