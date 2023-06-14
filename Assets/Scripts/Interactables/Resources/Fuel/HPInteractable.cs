@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FuelInteractable : Interactable
+public class HPInteractable : Interactable
 {
     [SerializeField]
-    private float fuelAmount;
+    private float HPAmount;
 
     private GameObject UI_Canvas;
     private ResourceInventory inventory;
@@ -18,7 +18,7 @@ public class FuelInteractable : Interactable
 
     protected override void Interact(Collider other)
     {
-        inventory.AddResource("Fuel", fuelAmount);
-        Destroy(gameObject);
+        inventory.AddResource("HP", HPAmount);
+        Destroy(this);
     }
 }

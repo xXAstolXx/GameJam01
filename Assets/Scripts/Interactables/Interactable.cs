@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
     [SerializeField]
     Color gizmoColor;
 
-    [SerializeField, Range(0, 1.0f)]
+    [SerializeField, Range(0, 5.0f)]
     private float debugInteractRadius;
 
     private SphereCollider interactableCollider;
